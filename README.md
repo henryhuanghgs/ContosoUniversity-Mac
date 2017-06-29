@@ -51,14 +51,18 @@
   To use MySql:
     1. Comment out the Sqlite line in Startup.cs
       #services.AddDbContext<SchoolContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("Sqlite")));
+      
     2. Remove comment on MySql line in Startup.cs
       services.AddDbContext<SchoolContext>(opt => opt.UseMySql(Configuration.GetConnectionString("MySql")));
+      
     3. Recreate migrations
       cd ~/workdir/ContosoUniversity/ContosoUniversity
       dotnet ef migrations remove
       dotnet ef migrations add "Initial"
+      
     4. Update database
       dotnet ef database update
+      
     5. run
       dotnet run
   
