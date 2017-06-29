@@ -45,29 +45,38 @@
   * Tutorial: https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro
   * code: https://github.com/aspnet/Docs/tree/master/aspnetcore/data/ef-mvc/intro/samples/cu-final
 
-2. Different databases are tested
+2. Unit tests project (ContosoUniversityTests) is added
+
+3. Different databases are tested
   * Sqlite
   * MySql
   * MsSql
 
-  The code is using Sqlite by default. Its db file is in /tmp/ContosoUniversity.db
+The code is using Sqlite by default. Its db file is in /tmp/ContosoUniversity.db
 
-  To use MySql:
-  
-    1. Comment out the Sqlite line in Startup.cs    
-      #services.AddDbContext<SchoolContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("Sqlite")));
-    2. Remove comment on MySql line in Startup.cs
-      services.AddDbContext<SchoolContext>(opt => opt.UseMySql(Configuration.GetConnectionString("MySql")));
-    3. Recreate migrations
-      cd ~/workdir/ContosoUniversity/ContosoUniversity
-      dotnet ef migrations remove
-      dotnet ef migrations add "Initial"
-    4. Update database
-      dotnet ef database update
-    5. run
-      dotnet run
-      
-4. Unit tests project (ContosoUniversityTests) is added
+To use MySql:  
+
+  1. Comment out the Sqlite line in Startup.cs
+
+    #services.AddDbContext<SchoolContext>(opt => opt.UseSqlite(Configuration.GetConnectionString("Sqlite")));
+
+  2. Remove comment on MySql line in Startup.cs
+
+    services.AddDbContext<SchoolContext>(opt => opt.UseMySql(Configuration.GetConnectionString("MySql")));
+
+  3. Recreate migrations
+
+    cd ~/workdir/ContosoUniversity/ContosoUniversity
+    dotnet ef migrations remove
+    dotnet ef migrations add "Initial"
+
+  4. Update database
+
+    dotnet ef database update
+
+  5. run
+
+    dotnet run
 
 
 
