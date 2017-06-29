@@ -1,6 +1,6 @@
-Port ContosoUniversity Tutorial Project to Mac
+# Port ContosoUniversity Tutorial Project to Mac
 
-Setup Environment
+## Setup Environment
 
 1. Install dotnet runtime in Mac
   https://www.microsoft.com/net/core#macos
@@ -12,7 +12,7 @@ Setup Environment
   cd ~/workdir
   git clone https://github.com/henryhuanghgs/ContosoUniversity-Mac.git
 
-How to run
+## How to run
 1. change current directory
   cd ~/workdir/ContosoUniversity-Mac
 
@@ -34,7 +34,7 @@ How to run
   http://localhost:5000
 
 
-Note:
+## Note:
 1. The project is ported from the dotnet tutorial 
   Tutorial: https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro
   code: https://github.com/aspnet/Docs/tree/master/aspnetcore/data/ef-mvc/intro/samples/cu-final
